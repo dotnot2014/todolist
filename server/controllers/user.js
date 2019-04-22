@@ -14,7 +14,7 @@ const postUserAuth = async function(ctx){
   const userInfo = await user.getUserByName(data.name);
 
   if(userInfo != null){
-    // if(!bcrypt.compareSync(data.password, userInfo.password)){
+    // 暂时处理 if(!bcrypt.compareSync(data.password, userInfo.password)){
     if(data.password != userInfo.password){
       ctx.body = {
         success: false,
